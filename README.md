@@ -32,9 +32,22 @@ Additionally, I incorporate mixup [Zha+18] to enhance model generalization.
 
 ## Result (test acc TBC)
 
-**Note:** We provide the checkpoint file models/cifar10_4x_best.pth corresponding to the results shown below.
+**Note:** We provide the checkpoint file `models/cifar10_4x_best.pth` corresponding to the results shown below.
 
 ![result-train-val](attachment/result-train-val.png)
+
+Val Acc: ~97.5%
+
+### Hyperparameters
+
+| **Parameter**         | **Value** | **Parameter**           | **Value**         |
+|-----------------------|-----------|-------------------------|-------------------|
+| **Pyramid Depth**     | 110       | **Epoch**               | 1200              |
+| **Pyramid Alpha**     | 120       | **Learning Rate** (after warmup) | 0.05              |
+| **SGD weight decay**  | 5e-4      | **batch size**          | 128               |
+| **SGD momentum**      | 0.9       | **Warm-Up Epoch**       | 5                 |
+| **Mixup Alpha**       | 1.0       | **Cutout Prob.**        | 0.5               |
+
 
 ## Reference
 
